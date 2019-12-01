@@ -18,7 +18,6 @@ public class BaseTest {
 	public void setup () {
 		//Create a Chrome driver. All test classes use this.
 		driver = new ChromeDriver();
-
 		//Maximize Window
 		driver.manage().window().maximize();
 	}

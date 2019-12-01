@@ -10,9 +10,9 @@ import java.io.IOException;
 
 public class Util {
 
-    public static void takeScreenshotAtEndOfTest(WebDriver driver) throws IOException {
+    public static void takeScreenshotAtEndOfTest(WebDriver driver, String testcasename) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String currentDir = System.getProperty("user.dir");
-        FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+        FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + testcasename + "_" + System.currentTimeMillis() + ".png"));
     }
 }
